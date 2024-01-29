@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        // Crear un arreglo con valores de prueba
+        var inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+
+        // Función de ordenación personalizada (algoritmo de burbuja)
+        function ordenarArreglo(arr) {
+            var len = arr.length;
+
+            for (var i = 0; i < len - 1; i++) {
+                for (var j = 0; j < len - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        // Intercambiar elementos si están en el orden incorrecto
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+            return arr;
+        }
+
+        // Llamar a la función de ordenación
+        var resultadoOrdenado = ordenarArreglo(inicio);
+
+        // Filtrar el arreglo para obtener solo números
+        var numerosOrdenados = resultadoOrdenado.filter(elemento => typeof elemento === 'number');
+
+        // Imprimir el resultado en consola
+        console.log("Arreglo original:", inicio);
+        console.log("Arreglo ordenado (solo números):", numerosOrdenados);
+    </script>
+</body>
+</html>
