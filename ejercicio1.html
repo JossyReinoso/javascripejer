@@ -1,0 +1,33 @@
+#Ejercicio 1
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+#etiqueta <script></script>    
+    <script>
+        // Crear una variable llamada numeroDeElementos que el profesor manipulará.
+        var numeroDeElementos = 10; // Puedes ajustar este valor según sea necesario.
+
+        // Función para imprimir los primeros 'n' elementos de la serie Fibonacci en consola
+        function imprimirSerieFibonacci(n) {
+            var fib = [0, 1];
+
+            // Calcular la serie Fibonacci
+            for (var i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+
+            // Imprimir la serie en consola
+            console.log("Serie Fibonacci de los primeros " + n + " elementos:");
+            console.log(fib.join(', '));
+        }
+
+        // Llamar a la función con el valor de numeroDeElementos
+        imprimirSerieFibonacci(numeroDeElementos);
+    </script>
+</body>
+</html>
